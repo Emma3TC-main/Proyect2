@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbvy3jtbouju6"]
+
+[ext_resource type="Script" path="res://scenes/game/enemy/lava.gd" id="1_dnj0g"]
+[ext_resource type="Texture2D" uid="uid://icjtqk5vblx0" path="res://assets/LAVA.png" id="2_64k1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bdch"]
+size = Vector2(1507, 346)
+
+[node name="Lava" type="Sprite2D"]
+script = ExtResource("1_dnj0g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 50.875)
+scale = Vector2(0.150055, 0.0187894)
+texture = ExtResource("2_64k1o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7, 185)
+shape = SubResource("RectangleShape2D_4bdch")

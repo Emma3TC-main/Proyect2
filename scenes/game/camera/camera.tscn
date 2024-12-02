@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://8rbt5lmdrp0s"]
+
+[ext_resource type="Script" path="res://scenes/game/camera/camera.gd" id="1_6v8ac"]
+
+[sub_resource type="Gradient" id="Gradient_ybaul"]
+offsets = PackedFloat32Array(0, 0.00769231, 0.969231)
+colors = PackedColorArray(0.946154, 0.946154, 0.946154, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5clwc"]
+gradient = SubResource("Gradient_ybaul")
+fill = 1
+fill_from = Vector2(0.510309, 0.479381)
+fill_to = Vector2(1, 0.757732)
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(363, 397)
+zoom = Vector2(1.75, 1.75)
+limit_left = -50
+limit_top = -50
+limit_right = 1580
+limit_bottom = 650
+position_smoothing_speed = 2.0
+editor_draw_limits = true
+script = ExtResource("1_6v8ac")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0.999996, 0.499981)
+scale = Vector2(4.9375, 4.98437)
+texture = SubResource("GradientTexture2D_5clwc")
